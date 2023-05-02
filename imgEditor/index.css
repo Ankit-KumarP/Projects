@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rubik+Bubbles&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+/* animation */
+@keyframes simple {
+  from {
+    color: red;
+  }
+  to {
+    color: yellow;
+  }
+  from {
+    font-size: 60px;
+  }
+  to {
+    font-size: 62px;
+  }
+}
+
+@keyframes simple2 {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: yellow;
+  }
+  from {
+    color: black;
+  }
+  to {
+    color: red;
+  }
+}
+@keyframes simple3 {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: yellow;
+  }
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("/image/BG.webp");
+  background-repeat: no-repeat;
+  font-family: "Pacifico", cursive;
+  width: 100%;
+  height: 100vh;
+  place-items: center;
+  display: grid;
+}
+
+.container {
+  border: 2px dashed gold;
+  box-shadow: 10px 20px yellow;
+  background-color: white;
+  width: 60%;
+  height: auto;
+  padding: 20px;
+}
+.container h1 {
+  font-size: 60px;
+  text-align: center;
+  font-family: "Rubik Bubbles", cursive;
+  text-transform: capitalize;
+  animation: simple 2s linear infinite;
+}
+
+/* display */
+.view_img {
+  width: 100%;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  background-color: rgba(255, 228, 196, 0.163);
+  margin: 10px 0px;
+}
+.view_img img {
+  width: 94%;
+  object-fit: contain;
+}
+
+/* buttonToChoose */
+.choose_img {
+  display: grid;
+  place-items: center;
+  margin: 10px 0px;
+}
+
+.choose_img button {
+  border: none;
+  outline: none;
+  margin: 10px 0px;
+  font-size: 27px;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  padding: 13px 25px;
+  border: none;
+  animation: simple2 1s linear infinite;
+  cursor: pointer;
+  font-family: cursive;
+  width: 300px;
+  font-family: "Pacifico", cursive;
+}
+.choose_img button img {
+  width: 35px;
+}
+
+/* slider */
+.disabled .slider {
+  pointer-events: none;
+  opacity: 0.5;
+  margin: 10px 0px;
+}
+.slider {
+  width: 100%;
+  position: relative;
+  padding: 10px;
+}
+
+.slider input[type="range"] {
+  width: 100%;
+}
+.slider .filter_info {
+  width: 100%;
+  /* display: flex;
+  justify-content: space-between; */
+  align-items: center;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+
+/* filter */
+.icons_filter {
+  width: 100%;
+  padding: 20px;
+  border-radius: 4px;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  margin: 10px 0px;
+}
+.disabled .icons_filter {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.icons_filter p {
+  text-transform: capitalize;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+.icons_filter .icons_room {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.icons_filter .icons_room button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.icons_room button img {
+  width: 25px;
+}
+.active {
+  background-color: rgb(174, 255, 255) !important;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+/* filter2 */
+.filter2 {
+  margin: 10px 0px;
+  padding: 20px;
+}
+.icons_room1 {
+  width: 100%;
+  /* display: flex;
+  justify-content: space-around; */
+  align-items: center;
+}
+.icons_filter .icons_room1 button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.icons_room1 button img {
+  width: 25px;
+}
+
+.icons_room1 button:last-child {
+  transform: rotate(90deg);
+}
+
+/* buttons */
+.btn_contain {
+  position: relative;
+  margin: 10px 0px;
+  padding-right: 10px;
+}
+.disabled .btn_contain {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.btn_contain button {
+  padding: 13px 20px;
+  margin: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-family: cursive;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn_contain button:first-child {
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  transition-duration: 400ms;
+}
+.btn_contain button:first-child:hover {
+  border: none;
+  background-color: rgb(19, 19, 156);
+  color: #fff;
+}
+.btn_contain button:last-child {
+  background-color: rgb(40, 177, 40);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
